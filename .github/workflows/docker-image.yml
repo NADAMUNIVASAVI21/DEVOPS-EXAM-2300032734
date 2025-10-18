@@ -28,7 +28,7 @@ jobs:
           context: ./backend-springbootapp
           file: ./backend-springbootapp/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/nadamunivasavi21/2300032734-exam-backend:final
+          tags: ${{ secrets.DOCKER_USER }}/2300032734-exam-backend:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v6
@@ -36,7 +36,7 @@ jobs:
           context: ./frontend-reactapp
           file: ./frontend-reactapp/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/nadamunivasavi21/2300032734-exam-frontend:final
+          tags: ${{ secrets.DOCKER_USER }}/2300032734-exam-frontend:latest
 
       - name: Save EC2 private key
         run: |
